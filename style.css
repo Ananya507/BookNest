@@ -1,0 +1,247 @@
+:root {
+  --color-ivory: #F7F3EA;
+  --color-forest: #244C3B;
+  --color-gold: #B18A51;
+  --color-text: #292F2B;
+
+  --font-body: Arial, sans-serif;
+  --font-heading: Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  margin: 0;
+}
+/* Website header */
+header {
+  background-color: var(--color-forest);
+  color: var(--color-ivory);
+  padding: 24px 40px;
+}
+
+/* Website heading */
+header h1 {
+  font-family: var(--font-heading);
+  margin: 0 0 8px;
+}
+
+/* Header description */
+header p {
+  margin: 0 0 20px;
+}
+
+/* Navigation list */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 24px;
+}
+
+/* Navigation links */
+nav a {
+  color: var(--color-ivory);
+  text-decoration: none;
+}
+
+/* Hover effect */
+nav a:hover {
+  color: var(--color-gold);
+}
+.hero
+{
+   padding:64px  40px 64px 40px;
+   text-align:center;
+   background-color:var(--color-ivory);
+}
+.hero h2
+{
+   font-family:var(--font-heading);
+   font-size:48px;
+   margin:0 0 16px;
+}
+.hero p
+{
+  font-size:18px;
+  line-height:1.6;
+  margin:0 0 32px;
+}
+#search-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+#search-form label
+{
+   font-weight: bold;
+  font-size: 14px;
+}
+#search-input {
+  width: 320px;
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid #D8D2C5;
+  border-radius: 8px;
+  font-family: inherit;
+  
+}
+#search-button {
+  background-color: var(--color-forest);
+  color: var(--color-ivory);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+#search-button:hover
+{
+  background-color:var(--color-gold);
+}
+.book-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5DFD3;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.book-card img {
+  width: 100%;
+  max-width: 200px;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+.book-card .book-title {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--color-forest);
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.book-card p {
+  font-size: 14px;
+  color: var(--color-text);
+  line-height: 1.5;
+  margin-top: 0;
+}
+.book-card button {
+  background-color: var(--color-forest);
+  color: var(--color-ivory);
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.book-card button:hover {
+  background-color: var(--color-gold);
+  color: var(--color-text);
+}
+.featured-books,
+.explore-library {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 40px;
+}
+.featured-books h2,
+.explore-library h2 {
+  grid-column: 1 / -1;
+  font-family: var(--font-heading);
+  font-size: 30px;
+  color: var(--color-forest);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.book-card
+{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  height:100%;
+}
+.book-card button
+{
+  margin-top:auto;
+}
+#search-input:focus {
+  border: 1px solid var(--color-forest);
+  outline: 2px solid var(--color-forest);
+  outline-offset: 2px;
+}
+footer {
+  background-color: var(--color-forest);
+  color: var(--color-ivory);
+  padding: 32px 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer p {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+footer p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  header {
+    padding: 20px;
+  }
+
+  .featured-books {
+    padding: 24px 16px;
+  }
+
+  .explore-library {
+    padding: 24px 16px;
+  }
+
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero h2 {
+    font-size: 34px;
+  }
+
+  #search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+
+  #search-button {
+    width: 100%;
+  }
+  nav ul
+  {
+     flex-wrap:wrap;
+     gap:16px;
+  }
+  footer
+  {
+     padding: 24px 16px;
+  }
+
+  
+}
